@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="p-5 my-3 bg-light text-center">
+  <div class="container py-5">
+    <h1 class="display-5 fw-bold">Welcome to FlaskApp</h1>
+    <p class="lead">
+      This application is built on the Python Flask framework
+    </p>
+    {% if session.logged_in==NULL %}
+    <a href="/register" class="btn btn-primary btn-lg mx-2">Register</a>
+    <a href="/login" class="btn btn-success btn-lg">Login</a>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
